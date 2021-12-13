@@ -14,5 +14,5 @@ run it with:
 python3 scan.py
 
 view the Huntress Log4Shell Vulnerability Results
-and look if you got a hit on a IP-adress.
+and look if you got a hit on a IP-address.
 

