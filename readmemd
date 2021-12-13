@@ -1,0 +1,8 @@
+goto https://log4shell.huntress.com/
+
+click on "view connections"
+
+copy the supplied string:
+${jndi:ldap://log4shell.huntress.com:1389/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx}
+
+goto scan.py replace the "check_url" with yours.
