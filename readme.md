@@ -15,8 +15,11 @@ ${jndi:ldap://log4shell.huntress.com:1389/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx}
 ip:port 
 
 6. run it with:
+
+(txt file import)
 python3 scan.py
 
+(commandline args)
 python3 scan.py 192.168.0.1:80
 
 python3 scan.py 192.168.0.1:80 - 254
