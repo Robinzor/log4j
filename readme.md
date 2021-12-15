@@ -1,18 +1,27 @@
-goto https://log4shell.huntress.com/
+Requirements:
+- curl
+- python3 
 
-click on "view connections"
+1. Go to https://log4shell.huntress.com/
 
-copy the supplied check_url string:
+2. Click on "view connections"
+
+3. Copy the supplied check_url string:
 ${jndi:ldap://log4shell.huntress.com:1389/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx}
 
-goto scan.py replace the "check_url" with yours.
+4. Goto scan.py replace the "check_url" with yours.
 
-fill "targets.txt" per line with:
+5. Fill "targets.txt" per line with:
 ip:port 
 
-run it with:
+6. run it with:
 python3 scan.py
 
-view the Huntress Log4Shell Vulnerability Results
+or
+python3 scan.py 192.168.0.1:80
+or
+python3 scan.py 192.168.0.1:80 - 254
+
+View the Huntress Log4Shell Vulnerability Results
 and look if you got a hit on a IP-address.
 
