@@ -14,7 +14,7 @@ ${jndi:ldap://log4shell.huntress.com:1389/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx}
 ##### 5. Fill "targets.txt" per line with:
 ip:port 
 
-##### 6. run it with:
+##### 6. Run it with:
 
 (txt file import)\
 **python3 scan.py**
