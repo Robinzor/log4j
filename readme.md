@@ -17,9 +17,8 @@ ip:port
 6. run it with:
 python3 scan.py
 
-or
 python3 scan.py 192.168.0.1:80
-or
+
 python3 scan.py 192.168.0.1:80 - 254
 
 View the Huntress Log4Shell Vulnerability Results
